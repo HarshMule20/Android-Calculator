@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             btndivide, btnC, btndecimal, btnans;
     TextView input, output;
     String process;
-    Boolean Check_Bracket;
+//    Boolean Check_Bracket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 //        btnpercent = findViewById(R.id.btn_percent);
 //        btnbracket = findViewById(R.id.btn_bracket);
 
-//        Input
+//        Input and Output
         input = findViewById(R.id.input_tv);
         output = findViewById(R.id.output_tv);
 //
@@ -390,8 +390,9 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     finalResult = "0";
                 }
+                String modified_finalResult = finalResult.substring(0, finalResult.indexOf('.') + 5);
 
-                output.setText(finalResult);
+                output.setText(modified_finalResult);
             }
         });
 

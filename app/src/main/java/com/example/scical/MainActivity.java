@@ -390,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     finalResult = "0";
                 }
-                String modified_finalResult = finalResult.substring(0, finalResult.indexOf('.') + 5);
+                String modified_finalResult = finalResult.substring(0, finalResult.indexOf('.') + 3);
 
                 output.setText(modified_finalResult);
             }

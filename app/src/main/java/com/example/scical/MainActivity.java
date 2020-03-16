@@ -333,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 process = input.getText().toString();
-                input.setText(process + "÷");
+                input.setText(process + "/");
             }
         });
 
@@ -390,9 +390,20 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     finalResult = "0";
                 }
-                String modified_finalResult = finalResult.substring(0, finalResult.indexOf('.') + 3);
+                String dot = ".";
+                String divide = "/";
+//                System.out.println(process.toLowerCase().indexOf(divide.toLowerCase()) > -1);
+//                if (process.toLowerCase().indexOf(divide.toLowerCase()) > -1){
+//                    if (finalResult.toLowerCase().indexOf(dot.toLowerCase()) > -1) {
+//                        String modified_finalResult = finalResult.substring(0, finalResult.indexOf('.') + 3);
+//                        System.out.println("In If condition");
+//                        output.setText(modified_finalResult);
+//                    }
+//                }
+//                else {
+                output.setText(finalResult);
+//                }
 
-                output.setText(modified_finalResult);
             }
         });
 
